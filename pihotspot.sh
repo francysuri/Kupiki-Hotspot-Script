@@ -1217,6 +1217,8 @@ if [[ $? -eq 0 ]]; then
     /bin/systemctl enable hostapd.service
     check_returned_code $?
 fi
+execute_command "killall wpa_supplicant" true "Killed wpa_supplicant"
+
 execute_command "service hostapd restart" true "Restarting hostapd"
 
 execute_command "service chilli start" true "Starting CoovaChilli service"
