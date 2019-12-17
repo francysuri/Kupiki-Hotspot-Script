@@ -24,7 +24,7 @@ HOTSPOT_NETWORK="192.168.10.0"
 # Secret word for FreeRadius
 FREERADIUS_SECRETKEY=`cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1`
 # WAN interface (the one with Internet - default 'eth0' or long name for Debian 9+)
-WAN_INTERFACE=`echo wlan0`
+WAN_INTERFACE=`echo eth0`
 # LAN interface (the one for the hotspot)
 LAN_INTERFACE="wlan1"
 # Wifi driver
